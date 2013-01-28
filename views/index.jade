@@ -1,0 +1,53 @@
+extends layout
+
+block content
+  .container
+    //
+       Main hero unit for a primary marketing message or call to action 
+    .hero-unit
+      h1(style='text-align: left; float: left;') Quick Config
+      div(style='text-align: left; float: left;') ruby gem
+      div(style='clear: both;')
+      p
+        | A quick and easy way to set and access configuration data in your Ruby applications.
+  .container
+    //
+       Example row of columns 
+    .row
+      .span4
+        h2 1. Install
+        p
+          | add to your .Gemfile
+          pre.prettyprint.
+            \ngem 'quick_config'
+            
+            $ bundle
+                          
+          | ... or install directly
+          pre.prettyprint.
+            \ngem install quick_config
+                          
+          p
+      .span4
+        h2 2. Use
+        p
+          code
+            a(href='quick_config_test.rb', target='_blank') quick_config_test.rb
+          pre.prettyprint.
+            \nrequire 'quick_config'
+            
+            QuickConfig.set do
+            \tproperty :name, "K"
+            \tproperty :age, 12  
+            end
+            
+            puts QuickConfig.age
+            puts QuickConfig.name
+                          
+      .span4
+        h2 3. Extend
+        p Do contribute. Fork the source code and extend it with your own features!
+        p
+          a.btn(href='https://github.com/kreso/quick_config#readme', target='_blank') Go »
+    hr
+    footer
