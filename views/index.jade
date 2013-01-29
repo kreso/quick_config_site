@@ -19,26 +19,26 @@ block content
         p
           | add to your .Gemfile
           pre.prettyprint.
-            \ngem 'quick_config'
+            gem 'quick_config'
             
             $ bundle
                           
           | ... or install directly
           pre.prettyprint.
-            \ngem install quick_config
+            gem install quick_config
                           
           p
       .span4
         h2 2. Use
         p
           code
-            a(href='quick_config_test.rb', target='_blank') quick_config_test.rb
+            a(href='/docs/quick_config_test.rb', target='_blank') quick_config_test.rb
           pre.prettyprint.
-            \nrequire 'quick_config'
+            require 'quick_config'
             
             QuickConfig.set do
-            \tproperty :name, "K"
-            \tproperty :age, 12  
+              property :name, "K"
+              property :age, 12  
             end
             
             puts QuickConfig.age
